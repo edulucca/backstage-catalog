@@ -1,0 +1,131 @@
+org.yaml
+---
+# 1. A Tribo (Agrupador Maior)
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: tribe-engineering
+  title: Engineering Tribe
+  description: Toda a organização de engenharia de software da empresa
+spec:
+  type: tribe
+  children:
+    - squad-devex
+    - squad-identity
+    - squad-maintenance-core
+    - squad-data-analytics
+    - squad-billing
+    - squad-frontend
+
+---
+# 2. As Squads (Grupos de Trabalho)
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: squad-maintenance-core
+  title: Squad Maintenance Core
+  description: Equipe responsável pelo core business, ordens de serviço e histórico de veículos
+spec:
+  type: squad
+  parent: tribe-engineering
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: squad-devex
+  title: Squad DevEx & Platform
+  description: Plataforma interna, portal do desenvolvedor e infraestrutura CI/CD
+spec:
+  type: squad
+  parent: tribe-engineering
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: squad-identity
+  title: Squad Identity & Access
+  description: Gestão de acessos, autenticação e segurança
+spec:
+  type: squad
+  parent: tribe-engineering
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: squad-data-analytics
+  title: Squad Data & Analytics
+  description: Engenharia de dados, pipelines e cluster de logs
+spec:
+  type: squad
+  parent: tribe-engineering
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: squad-billing
+  title: Squad Billing
+  description: Faturamento, integração com gateways de pagamento e notas fiscais
+spec:
+  type: squad
+  parent: tribe-engineering
+  children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: squad-frontend
+  title: Squad Frontend & Portals
+  description: Aplicações web e mobile voltadas para o cliente final
+spec:
+  type: squad
+  parent: tribe-engineering
+  children: []
+
+---
+# 3. Os Usuários (Engenheiros e Gestores)
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: eduardo-santana
+spec:
+  profile:
+    displayName: Eduardo Santana
+    email: eduardo.santana@empresa.com
+    picture: https://ui-avatars.com/api/?name=Eduardo+Santana&background=0D8ABC&color=fff
+  memberOf: 
+    - squad-maintenance-core
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: admin-user
+spec:
+  profile:
+    displayName: Admin Platform
+    email: admin@empresa.com
+    picture: https://ui-avatars.com/api/?name=Admin+Platform&background=b30000&color=fff
+  memberOf: 
+    - squad-devex
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: alice-dados
+spec:
+  profile:
+    displayName: Alice (Data Engineer)
+    email: alice.dados@empresa.com
+    picture: https://ui-avatars.com/api/?name=Alice+Dados&background=00b33c&color=fff
+  memberOf: 
+    - squad-data-analytics

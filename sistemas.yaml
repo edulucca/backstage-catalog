@@ -1,0 +1,83 @@
+# sistemas.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: maintenance-manager
+  title: Maintenance Manager System
+  description: O coração do nosso produto SaaS. Plataforma de gestão de frotas, registro de histórico de veículos e ordens de serviço.
+  tags:
+    - saas-core
+    - java
+    - spring-boot
+spec:
+  owner: group:squad-maintenance-core
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: devex-platform
+  title: Developer Experience Platform
+  description: Conjunto de ferramentas internas, automações de CI/CD e o próprio portal do desenvolvedor (Backstage).
+  tags:
+    - internal
+    - platform
+    - tool
+spec:
+  owner: group:squad-devex
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: identity-access
+  title: Identity & Access Management (IAM)
+  description: Sistema centralizado de autenticação, autorização (OAuth2) e gestão de acessos de usuários.
+  tags:
+    - security
+    - auth
+spec:
+  owner: group:squad-identity
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: data-analytics
+  title: Data & Analytics System
+  description: Pipelines de dados, ingestão de logs e geração de relatórios analíticos.
+  tags:
+    - big-data
+    - analytics
+    - python
+spec:
+  owner: group:squad-data-analytics
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: billing-gateway
+  title: Billing & Payments Gateway
+  description: Gestão de assinaturas, integração com gateways de pagamento e emissão de notas fiscais.
+  tags:
+    - finance
+    - payments
+    - pci-compliant
+spec:
+  owner: group:squad-billing
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: customer-portal
+  title: Customer Portals
+  description: Aplicações web e mobile (Frontend e BFFs) que os clientes finais utilizam para acessar nossos serviços.
+  tags:
+    - frontend
+    - mobile
+    - react
+spec:
+  owner: group:squad-frontend

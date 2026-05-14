@@ -1,0 +1,10 @@
+#Localicação de todos os componentes
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: global-catalog
+  description: Ponteiro principal para toda a arquitetura
+spec:
+  targets:
+    - ./org.yaml
+    - ./sistemas.yaml
