@@ -59,3 +59,46 @@ spec:
   type: s3-bucket
   owner: group:squad-billing
   system: billing-gateway
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: db-data-warehouse
+  title: Data Warehouse (Redshift/PostgreSQL)
+  description: Armazém de dados central com dados consolidados da empresa.
+  tags: [database, data-warehouse, postgresql]
+  annotations:
+    github.com/project-slug: myorg/data-analytics-platform
+spec:
+  type: database
+  owner: group:squad-data-analytics
+  system: data-analytics
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bucket-datalake
+  title: Data Lake S3 (Raw Data)
+  description: Bucket de armazenamento de objetos para dados brutos não estruturados.
+  tags: [storage, aws-s3, datalake]
+  annotations:
+    github.com/project-slug: myorg/data-analytics-platform
+spec:
+  type: s3-bucket
+  owner: group:squad-data-analytics
+  system: data-analytics
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kafka-cluster-analytics
+  title: Broker Kafka (Analytics)
+  description: Cluster Kafka dedicado para processamento de streaming de dados.
+  tags: [messaging, kafka, data-streaming]
+  annotations:
+    github.com/project-slug: myorg/data-analytics-platform
+spec:
+  type: message-broker
+  owner: group:squad-data-analytics
+  system: data-analytics
