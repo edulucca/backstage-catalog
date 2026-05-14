@@ -102,3 +102,46 @@ spec:
   type: message-broker
   owner: group:squad-data-analytics
   system: data-analytics
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: db-usuarios-iam
+  title: DB Usuários e Permissões (PostgreSQL)
+  description: Banco de dados relacional com as credenciais criptografadas e roles.
+  tags: [database, postgresql, security]
+  annotations:
+    github.com/project-slug: myorg/identity-access-platform
+spec:
+  type: database
+  owner: group:squad-identity
+  system: identity-access
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cache-sessoes-redis
+  title: Cache de Sessões (Redis)
+  description: Cluster Redis para armazenamento de sessões ativas e tokens revogados (blocklist).
+  tags: [cache, redis, in-memory]
+  annotations:
+    github.com/project-slug: myorg/identity-access-platform
+spec:
+  type: database
+  owner: group:squad-identity
+  system: identity-access
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kafka-auditoria-iam
+  title: Broker Kafka (Segurança)
+  description: Broker dedicado para eventos de segurança e auditoria (isolado por compliance).
+  tags: [messaging, kafka, security]
+  annotations:
+    github.com/project-slug: myorg/identity-access-platform
+spec:
+  type: message-broker
+  owner: group:squad-identity
+  system: identity-access
