@@ -160,17 +160,18 @@ spec:
   owner: group:squad-frontend
   system: customer-portal
 
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: cache-bff-redis
-  title: Cache de Respostas (Redis)
-  description: Cache em memória para aliviar requisições repetitivas dos BFFs para os microsserviços core.
-  tags: [cache, redis]
+  name: k8s-cluster-platform
+  title: Cluster Kubernetes (Platform Core)
+  description: Cluster EKS dedicado para rodar as ferramentas internas da engenharia.
+  tags: [infrastructure, kubernetes, aws]
   annotations:
-    github.com/project-slug: myorg/customer-portal-platform
+    github.com/project-slug: myorg/devex-platform
 spec:
-  type: database
-  owner: group:squad-frontend
-  system: customer-portal
+  type: cluster
+  owner: group:squad-devex
+  system: devex-platform
