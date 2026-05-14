@@ -1,4 +1,5 @@
 #Localicação de todos os componentes
+---
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
