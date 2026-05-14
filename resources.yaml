@@ -159,3 +159,18 @@ spec:
   type: database
   owner: group:squad-frontend
   system: customer-portal
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cache-bff-redis
+  title: Cache de Respostas (Redis)
+  description: Cache em memória para aliviar requisições repetitivas dos BFFs para os microsserviços core.
+  tags: [cache, redis]
+  annotations:
+    github.com/project-slug: myorg/customer-portal-platform
+spec:
+  type: database
+  owner: group:squad-frontend
+  system: customer-portal
