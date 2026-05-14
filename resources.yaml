@@ -145,17 +145,6 @@ spec:
   type: message-broker
   owner: group:squad-identity
   system: identity-access
-
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: customer-portal
-  title: Portal do Cliente
-  description: Experiência web e mobile, BFFs e design system para gestores e frota.
-  tags: [frontend, portal, bff]
-spec:
-  owner: group:squad-frontend
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Resource
