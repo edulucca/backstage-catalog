@@ -35,3 +35,27 @@ spec:
   type: message-broker
   owner: group:squad-maintenance-core
   system: maintenance-manager
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: db-financeiro-oracle
+  title: DB Financeiro Core (Oracle)
+  description: Banco de dados relacional transacional de alta performance para o ledger financeiro e controle de assinaturas.
+  tags: [database, oracle, pl-sql, finance]
+spec:
+  type: database
+  owner: group:squad-billing
+  system: billing-gateway
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bucket-notas-fiscais
+  title: Storage de Notas Fiscais (S3)
+  description: Armazenamento de arquivos XML e PDF das notas fiscais emitidas.
+  tags: [storage, aws-s3]
+spec:
+  type: s3-bucket
+  owner: group:squad-billing
+  system: billing-gateway
