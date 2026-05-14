@@ -1,0 +1,37 @@
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: db-legado-inventario
+  title: DB Inventário de Peças (Oracle)
+  description: Banco de dados legado com catálogo e estoque de peças.
+  tags: [database, oracle, legacy]
+spec:
+  type: database
+  owner: group:squad-maintenance-core
+  system: maintenance-manager
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cluster-logs-manutencao
+  title: Cluster de Logs (MongoDB)
+  tags: [database, mongodb, nosql]
+spec:
+  type: database
+  owner: group:squad-maintenance-core
+  system: maintenance-manager
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kafka-eventos-core
+  title: Broker Kafka (Core)
+  tags: [messaging, kafka, broker]
+spec:
+  type: message-broker
+  owner: group:squad-maintenance-core
+  system: maintenance-manager
